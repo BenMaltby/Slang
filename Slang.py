@@ -1,4 +1,3 @@
-from types import NoneType
 from Stack import Stack
 import sys
 
