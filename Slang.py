@@ -198,7 +198,7 @@ class Interpreter(Position):
 			return self.__operations[curr_op_node.op_type](curr_op_node.left.t_value, self.solve_operation_node(curr_op_node.right))
 
 
-	def run_new(self):
+	def run(self):
 
 		for _, instruction in enumerate(self.__Exec_buff):  # look over each output instruction
 			
@@ -229,7 +229,7 @@ def main(text):
 		# print(parse_tree)
 
 		translate = Interpreter(parse_tree)
-		translate.run_new()
+		translate.run()
 
 
 if __name__ == "__main__":
