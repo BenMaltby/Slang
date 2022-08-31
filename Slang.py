@@ -227,7 +227,7 @@ def main(text, show_stages):
 
 		if show_stages:
 			print("Tokens:", tokens)
-			print("Tree", parse_tree)
+			print("Tree:", parse_tree)
 
 		translate = Interpreter(parse_tree)
 		translate.run()
