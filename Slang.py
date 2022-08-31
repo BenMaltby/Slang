@@ -1,4 +1,3 @@
-from types import NoneType
 from Stack import Stack
 import sys
 
@@ -207,7 +206,7 @@ class Interpreter(Position):
 				if type(instruction.branch) == TOKEN:  # outputting a number
 					if instruction.branch.t_type in [INT, FLOAT]: print(instruction.branch.t_value)
 
-				elif type(instruction.branch) == NoneType: raise Exception("Not outputting anything")
+				elif instruction.branch == None: raise Exception("Not outputting anything")
 
 				else:  # is an operation
 					result = self.solve_operation_node(instruction.branch)
