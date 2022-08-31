@@ -216,16 +216,18 @@ class Interpreter(Position):
 				raise Exception("Somehow instruction is not of type OUTPUT_NODE")
 
 
-def main(text):
+def main(text, show_stages):
 
 	if text:
 		lexer = Lexer(text.strip())
 		tokens = lexer.lex()
-		# print(tokens)
 
 		parser = Parser(tokens)
 		parse_tree = parser.parse()
-		# print(parse_tree)
+
+		if show_stages:
+			print(tokens)
+			print(parse_tree)
 
 		translate = Interpreter(parse_tree)
 		translate.run()
@@ -233,10 +235,14 @@ def main(text):
 
 if __name__ == "__main__":
 
+	show_stages = False
 	if len(sys.argv) == 1:  # run command line interpreter
 		while True:
 			text = input(">>> ")
-			main(text)
+
+			if text == ":show_stages": show_stages = True if not show_stages else False
+
+			main(text, show_stages)
 
 	else:
 		raise Exception("No external parameters accepted")
