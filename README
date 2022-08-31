@@ -1,6 +1,6 @@
 made to learn the stages of language translation. Kind of esoteric language, but is not turing complete. 
 
-Stages
+Stages:
 ---------
 . Lexical Analysis (creating tokens from expression)
 . Generate Syntax tree based on language rules and instruction significance
