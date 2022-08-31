@@ -241,8 +241,7 @@ if __name__ == "__main__":
 			text = input(">>> ")
 
 			if text == ":show_stages": show_stages = True if not show_stages else False
-
-			main(text, show_stages)
+			else: main(text, show_stages)
 
 	else:
 		raise Exception("No external parameters accepted")
