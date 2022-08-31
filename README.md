@@ -10,4 +10,4 @@ Stages:
 
 Screenshot:
 ---------
-<img src="./Slang_screenshot.png" width=734px height=192px>
+<img src="./Slang_Screenshot.png" width=734px height=192px>
