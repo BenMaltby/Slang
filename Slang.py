@@ -196,6 +196,9 @@ class Interpreter(Position):
 		if type(curr_op_node.left) == TOKEN and type(curr_op_node.right) == OP_Node:
 			return self.__operations[curr_op_node.op_type](curr_op_node.left.t_value, self.solve_operation_node(curr_op_node.right))
 
+		if type(curr_op_node.left) == OP_Node and type(curr_op_node.right) == OP_Node:
+			return self.__operations[curr_op_node.op_type](self.solve_operation_node(curr_op_node.left), self.solve_operation_node(curr_op_node.right))
+
 
 	def run(self):
 
