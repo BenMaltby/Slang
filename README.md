@@ -1,6 +1,6 @@
 # Slang (Stack-Lang)
 
-made to learn the stages of language translation. Kind of esoteric language, but is not turing complete. 
+made to learn the stages of language translation. Just for fun 👍
 
 Stages:
 ---------
